@@ -16,7 +16,7 @@ public class JDAMultiShard {
     }
 
     public boolean isValid(String id){
-        return getGuild(id) != null;
+        return manager.getGuildById(id) != null;
     }
 
     public Guild getGuild(String id){
