@@ -365,13 +365,10 @@ public class Player extends AudioEventAdapter {
     /**
      * Do not call.
      */
-    public void crash() {
-
-        CRASHED.set(true);
+    public void clean() {
         player.destroy();
+        currentTrack = null;
         playlist.clear();
         queueHooks.forEach(queueHooks::unRegister);
-        //noinspection all
-        new String("I warned you.");
     }
 }
