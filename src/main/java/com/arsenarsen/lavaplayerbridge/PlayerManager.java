@@ -164,8 +164,8 @@ public class PlayerManager {
      * @param player The player to delete. It will immediately stop working.
      */
     public void deletePlayer(Player player) {
+        player.clean();
         players.remove(player.getGuildId());
-        player.crash();
     }
 
     @Override
